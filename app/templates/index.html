@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первый проект</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <form action="" method="POST">
+        <!-- {{ form.csrf_token }} -->
+        {{ form.hidden_tag() }} <!--Чтобы работала проверка форм в функции validate_on_submit()-->
+        <div>
+            {{ form.test_form.label }}
+            {{ form.test_form(class="test_class", title="Заполни меня", placeholder="Пни меня") }}  
+        </div>
+        {% for error in form.test_form.errors %}
+        <div class="errors">{{ error }}</div>
+        {% endfor %}   
+        <div>
+            {{ form.submit.label }}
+            {{ form.submit }}
+        </div>
+        <div>
+            <a href="/logout">Выход</a>
+        </div>
+    </form>
+</body>
+</html>

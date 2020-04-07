@@ -1,0 +1,34 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+label {
+    color: white;
+    margin: 20px 0;
+    display: inline-block;
+}
+.errors {
+    background-color: red;
+    color: azure;
+    text-align: center
+}
+.register_window {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.register_window > div:nth-child(1) {
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: #360026;
+    margin-top: -100px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
